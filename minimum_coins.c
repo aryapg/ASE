@@ -1,16 +1,16 @@
 #include <stdio.h>
-int min(int coins[], int n, int amount) 
+int min(int coins[], int n1, int amount) 
 {
     if(amount==0)
     {
         return 0;
     }
     int result=amount+1;
-    for (int i=0;i<n;i++) 
+    for (int i=0;i<n1;i++) 
     {
         if (coins[i]<=amount) 
         {
-            int subResult=1+min(coins, n, amount-coins[i]);
+            int subResult=1+min(coins, n1, amount-coins[i]);
             if (subResult<result) 
             {
                 result=subResult;
